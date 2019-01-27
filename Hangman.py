@@ -136,7 +136,16 @@ def PreHangMan():
     pygame.draw.line(Display, GREEN, (100,230),(150,270),8)#righthand
     pygame.draw.line(Display, GREEN, (100,320),(50,360),8)#leftleg
     pygame.draw.line(Display, GREEN, (100,320),(150,360),8)#rightleg
-
+		
+def StartScreen():
+    Display.blit(pygame.font.Font("freesansbold.ttf",40).render("HANGMAN",True,BLACK), (20,20))
+    Display.blit(Font2.render("by JCLOH",True,BLACK), (60,60))
+    Display.blit(Font.render("Level Difficulty",True,BLACK), (200,150))
+    Display.blit(Font2.render("1-Easy",True,BLACK), (200,200))
+    Display.blit(Font2.render("2-Medium",True,BLACK), (200,250))
+    Display.blit(Font2.render("3-Hard",True,BLACK), (200,300))
+    Display.blit(Font2.render("4-Color",True,GREY), (200,350))
+          
 def main():
     BLACK = (0,0,0)
     WHITE = (255,255,255)
@@ -147,14 +156,9 @@ def main():
     GREY = (200,200,200)
 
     TheChoice = 0
-    Display.blit(pygame.font.Font("freesansbold.ttf",40).render("HANGMAN",True,BLACK), (20,20))
-    Display.blit(Font2.render("by JCLOH",True,BLACK), (60,60))
-    Display.blit(Font.render("Level Difficulty",True,BLACK), (200,150))
-    Display.blit(Font2.render("1-Easy",True,BLACK), (200,200))
-    Display.blit(Font2.render("2-Medium",True,BLACK), (200,250))
-    Display.blit(Font2.render("3-Hard",True,BLACK), (200,300))
-    Display.blit(Font2.render("4-Color",True,GREY), (200,350))
-
+		
+		StartScreen()
+		
     PreHangMan()
 
     #background music
@@ -164,7 +168,6 @@ def main():
     FirstCondi = True
     while FirstCondi:
         
-
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
