@@ -157,13 +157,13 @@ def main():
 
     TheChoice = 0
 		
-		StartScreen()
+    StartScreen()
 		
     PreHangMan()
 
     #background music
-    pygame.mixer.music.load('Music\Playground-sc1.mp3')
-    pygame.mixer.music.play(-1,0.0)
+    pygame.mixer.music.load('Music\KM\Two Finger Johnny.mp3')
+    pygame.mixer.music.play(-1,0)
     
     FirstCondi = True
     while FirstCondi:
@@ -407,8 +407,8 @@ def main():
             #stop the BGM
             pygame.mixer.music.stop()
 
-            pygame.mixer.Sound('Music\Fail.wav').play()
-            
+            pygame.mixer.music.load('Music\KM\Loping Sting.mp3')
+            pygame.mixer.music.play(0,0)
 
         elif (TheWord == "".join(EmptyList)):
             Display.fill(WHITE)
@@ -432,14 +432,15 @@ def main():
             #stop the BGM
             pygame.mixer.music.stop()
 
-            pygame.mixer.Sound('Music\Success.wav').play()            
+            pygame.mixer.music.load('Music\KM\Loping Sting.mp3')
+            pygame.mixer.music.play(0,0)            
 
         pygame.display.update()
         pygame.time.Clock().tick(30) #30fps
         
         if (Off == 1):
-            #wait 3 seconds
-            time.sleep(3)
+            #wait 5 seconds
+            time.sleep(5)
             #quit game
             pygame.quit()
             sys.exit()
