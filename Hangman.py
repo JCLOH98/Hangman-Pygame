@@ -242,7 +242,7 @@ def main():
     #TheWord = "wew"
 
     #This is to check if it got the word from the list
-    print(TheWord)
+    #print(TheWord)
 
     EmptyList = []
 
@@ -346,7 +346,7 @@ def main():
                             pygame.draw.rect(Display,WHITE,(340,270,35,25)) #hide yes
                             Display.blit(Font2.render("Yes",True,GREEN),(340,270))
                             #print(pygame.mouse.get_pos())
-                            print("YES")
+                            #print("YES")
                             
                         #NO
                         elif (pygame.mouse.get_pos()[0] > 415 and\
@@ -356,7 +356,7 @@ def main():
                             pygame.draw.rect(Display,WHITE,(415,270,35,25)) #hide no
                             Display.blit(Font2.render("No",True,GREEN),(415,270))
                             #print(pygame.mouse.get_pos())
-                            print("NO")
+                            #print("NO")
 
                             
             elif event.type == MOUSEBUTTONUP:#Yes
